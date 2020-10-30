@@ -99,8 +99,8 @@ class App extends React.Component {
                 messaggio: ''
             });
         } else {
-            /* assegna la query inserita, imposta il caricamento come true ed il risultato della 
-               chiamata alla funzione recuperaRisultatiRicerca */
+            /* ... altrimenti assegna la query inserita, imposta il caricamento come true ed il risultato 
+            della chiamata alla funzione recuperaRisultatiRicerca */
             this.setState({ query, caricamento: true, messaggio: '' }, () => {
                 this.recuperaRisultatiRicerca(1, query);
             });
@@ -214,8 +214,8 @@ class App extends React.Component {
     };
 
     /**
-     * Fetch results according to the prev or next page requests.
-     * @param {String} type 'prev' or 'next'
+     * Recupera i risultati in accordo con la richiesta della pagina precedente o successive
+     * @param {String} type 'precedente' or 'successivo'
      */
     gestisciClickPagine = (type) => {
         const paginaCorrente = 'precedente' === type 
@@ -224,8 +224,7 @@ class App extends React.Component {
 
         if (!this.state.caricamento) {
             this.setState({ caricamento: true, message: '' }, () => {
-              // Fetch previous 20 Results
-              this.recuperaRisultatiRicerca(paginaCorrente, this.state.query);
+                this.recuperaRisultatiRicerca(paginaCorrente, this.state.query);
             });
         }
     }
