@@ -1,0 +1,13 @@
+/* Modifica agli stili di React Responsive Carousel */
+.slider-wrapper {
+    height: auto;
+}
+
+.thumbs-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbs-wrapper {
+    display: none;
+}
